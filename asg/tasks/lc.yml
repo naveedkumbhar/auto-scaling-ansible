@@ -1,0 +1,14 @@
+---
+  - ec2_lc:
+      name: lc-1
+      image_id: ami-781f6f18
+      key_name: universal
+      security_groups: ['sg-9b5e1ffe','sg-b6f0edd3']
+      instance_type: t2.micro
+      state: present
+      volumes:
+      - device_name: /dev/sda1
+        volume_size: 8
+        device_type: gp2
+        delete_on_termination: true
+

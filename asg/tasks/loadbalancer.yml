@@ -1,0 +1,22 @@
+---
+  - local_action:
+      module: ec2_elb_lb
+      name: "myLoadBalancer"
+      state: present
+      zones: 
+        - us-west-1a
+        - us-west-1c
+      listeners:
+        - protocol: http
+          load_balancer_port: 80
+          instance_port: 80
+      health_check:
+          ping_protocol: http
+          ping_port: 80
+          ping_path: "/elb.html"
+          response_timeout: 5
+          interval: 30
+          unhealthy_threshold: 2
+          healthy_threshold: 5
+
+          

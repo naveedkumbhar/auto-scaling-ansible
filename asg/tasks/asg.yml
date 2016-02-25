@@ -1,0 +1,11 @@
+--- 
+    - name: Creating Autoscaling Group
+      ec2_asg:
+         name: asg
+         load_balancers: ['myLoadBalancer'] 
+         availability_zones: [ 'us-west-1a', 'us-west-1c'] 
+         launch_config_name: 'lc-1'
+         min_size: 1
+         max_size: 3
+         desired_capacity: 1
+         vpc_zone_identifier: ['subnet-1ca31e79','subnet-ef5dafb6'] 
