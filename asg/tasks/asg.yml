@@ -1,10 +1,10 @@
 --- 
     - name: Creating Autoscaling Group
       ec2_asg:
-         name: asg
-         load_balancers: ['myLoadBalancer'] 
+         name: "{{asgname}}"
+         load_balancers: ['{{loadbalancer}}'] 
          availability_zones: [ 'us-west-1a', 'us-west-1c'] 
-         launch_config_name: 'lc-1'
+         launch_config_name: "{{lcname}}"
          min_size: 1
          max_size: 3
          desired_capacity: 1

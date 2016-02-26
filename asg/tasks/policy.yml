@@ -1,0 +1,10 @@
+---
+- ec2_scaling_policy:
+    state: present
+    region: us-west-1 
+    name: "scaleup-policy"
+    adjustment_type: "ChangeInCapacity"
+    asg_name: "{{ asgname }}"
+    scaling_adjustment: +1
+    min_adjustment_step: 1
+    cooldown: 300

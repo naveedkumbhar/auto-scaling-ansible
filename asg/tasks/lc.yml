@@ -1,10 +1,10 @@
 ---
   - ec2_lc:
-      name: lc-1
-      image_id: ami-781f6f18
-      key_name: universal
+      name: "{{lcname}}"
+      image_id: "{{ami}}"
+      key_name: "{{keyname}}"
       security_groups: ['sg-9b5e1ffe','sg-b6f0edd3']
-      instance_type: t2.micro
+      instance_type: "{{instancetype}}"
       state: present
       volumes:
       - device_name: /dev/sda1

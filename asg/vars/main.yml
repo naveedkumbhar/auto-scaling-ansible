@@ -1,0 +1,9 @@
+---
+ asgname: asg
+ loadbalancer: myLoadbalancer
+ lcname: myLaunchConfig
+ keyname: universal
+ instancetype: t2.micro
+ region: us-west-1
+ policyname: scaledown
+ ami: ami-781f6f18

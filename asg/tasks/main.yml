@@ -2,3 +2,4 @@
  - include: loadbalancer.yml
  - include: lc.yml
  - include: asg.yml
+ - include: policy.yml

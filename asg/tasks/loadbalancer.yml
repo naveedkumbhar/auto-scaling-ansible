@@ -1,7 +1,7 @@
 ---
   - local_action:
       module: ec2_elb_lb
-      name: "myLoadBalancer"
+      name: "{{loadbalancer}}"
       state: present
       zones: 
         - us-west-1a
