@@ -3,3 +3,4 @@
  - include: lc.yml
  - include: asg.yml
  - include: policy.yml
+ - include: alarm.yml
